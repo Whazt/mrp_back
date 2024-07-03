@@ -1,0 +1,12 @@
+{
+  "builds": [
+    {
+      "src": "./",
+      "use": "@railway/nodejs"
+    }
+  ],
+  "env": {
+    "MONGO_URI": "MONGO_URI",
+    "PORT": "3001"
+  }
+}
