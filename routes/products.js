@@ -23,4 +23,11 @@ router.get('/:id', async (req, res) => {
   res.json(product);
 });
 
+// Eliminar un producto por ID
+router.delete('/:id', async (req, res) => {
+  const { id } = req.params;
+  await Product.findByIdAndDelete(id);
+  res.status(200).json({ message: 'Producto eliminado' });
+});
+
 module.exports = router;

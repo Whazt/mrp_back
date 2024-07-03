@@ -23,4 +23,11 @@ router.get('/:id', async (req, res) => {
   res.json(component);
 });
 
+// Eliminar un componente por ID
+router.delete('/:id', async (req, res) => {
+  const { id } = req.params;
+  await Component.findByIdAndDelete(id);
+  res.status(200).json({ message: 'Componente eliminado' });
+});
+
 module.exports = router;
